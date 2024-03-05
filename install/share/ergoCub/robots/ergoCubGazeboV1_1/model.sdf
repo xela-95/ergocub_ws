@@ -196,7 +196,7 @@
           </limit>
         </ode>
       </physics>
-      <!-- <sensor name='l_leg_ft' type='force_torque'>
+      <sensor name='l_leg_ft' type='force_torque'>
         <always_on>true</always_on>
         <update_rate>100</update_rate>
         <force_torque>
@@ -205,10 +205,17 @@
         </force_torque>
         <pose>5.2041699999999996e-18 0 0 3.1415899999999999 -2.0213199324164966e-15
           2.6179899999999998</pose>
-        <plugin name='left_leg_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
-      <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_leg_ft.ini</yarpConfigurationFile>
+        <plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+          <!--
+          <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_leg_ft.ini</yarpConfigurationFile> -->
+          <yarpConfigurationString>
+            (yarpDeviceName ergocub_left_leg_ft)
+            (disableImplicitNetworkWrapper)
+            (jointName l_leg_ft_sensor)
+            (sensorName l_leg_ft)
+          </yarpConfigurationString>
         </plugin>
-      </sensor> -->
+      </sensor>
     </joint>
     <link name='l_hip_3'>
       <pose relative_to='l_leg_ft_sensor'>0 0 0 0 0 0</pose>
@@ -4557,11 +4564,11 @@
     <plugin name='controlboard_right_hand' filename='libgazebo_yarp_controlboard.so'>
     <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_right_hand_mk5_1.ini</yarpConfigurationFile>
     </plugin> -->
-    <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
+    <!-- <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
       <yarpRobotInterfaceConfigurationFile>
         /home/acroci/ergocub_ws/install/share/ergoCub/conf/ergocub.xml
       </yarpRobotInterfaceConfigurationFile>
-    </plugin>
+    </plugin> -->
     <pose>0 0 0.80000000000000004 0 0 0</pose>
     <frame name='base_link_fixed_joint' attached_to='root_link'>
       <pose>0 0 0 0 0 0</pose>
