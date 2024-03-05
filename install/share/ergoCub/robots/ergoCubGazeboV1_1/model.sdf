@@ -3316,7 +3316,7 @@
       <yarpConfigurationFile>model://ergoCub/conf/sensors/gazebo_ergocub_rgbd_camera.ini</yarpConfigurationFile>
         </plugin>
       </sensor> -->
-      <!-- <sensor name='realsense_head_rgb' type='camera'>
+      <sensor name='realsense_head_rgb' type='camera'>
         <always_on>true</always_on>
         <update_rate>30</update_rate>
         <pose>0.0075154799999999997 -0.0115 1.7352100000000001e-08 -1.5708 4.4408920985006262e-16
@@ -3343,10 +3343,7 @@
           </clip>
         </camera>
         <visualize>false</visualize>
-        <plugin name='ergocub_yarp_gazebo_plugin_camera' filename='libgazebo_yarp_camera.so'>
-          <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_rgb_camera.ini</yarpConfigurationFile>
-        </plugin>
-      </sensor> -->
+      </sensor>
       <sensor name='realsense_imu_0' type='imu'>
         <always_on>true</always_on>
         <update_rate>100</update_rate>
@@ -3363,6 +3360,14 @@
         </plugin>
       </sensor>
     </link>
+    <!-- <plugin name="gzyarp::Camera" filename="gz-sim-yarp-camera-system">
+      <yarpConfigurationString>
+        (yarpDeviceName ergocub_rgb_camera)
+        (parentLinkName realsense)
+        (sensorName realsense_head_rgb)
+        (display_timestamp)
+      </yarpConfigurationString>
+    </plugin> -->
     <joint name='r_shoulder_pitch' type='revolute'>
       <pose relative_to='chest'>-0.01351867684261035 -0.067047611172274521 0.1235198108094178
         -0.25361232387326105 -0.052031605504494968 0.27527873241387002</pose>
