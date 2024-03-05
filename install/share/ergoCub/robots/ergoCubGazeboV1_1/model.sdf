@@ -4557,11 +4557,11 @@
     <plugin name='controlboard_right_hand' filename='libgazebo_yarp_controlboard.so'>
     <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_right_hand_mk5_1.ini</yarpConfigurationFile>
     </plugin> -->
-    <!-- <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
+    <plugin name="gzyarp::RobotInterface" filename="gz-sim-yarp-robotinterface-system">
       <yarpRobotInterfaceConfigurationFile>
         /home/acroci/ergocub_ws/install/share/ergoCub/conf/ergocub.xml
       </yarpRobotInterfaceConfigurationFile>
-    </plugin> -->
+    </plugin>
     <pose>0 0 0.80000000000000004 0 0 0</pose>
     <frame name='base_link_fixed_joint' attached_to='root_link'>
       <pose>0 0 0 0 0 0</pose>
