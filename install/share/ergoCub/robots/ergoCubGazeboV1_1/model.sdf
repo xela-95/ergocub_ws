@@ -3184,7 +3184,7 @@
           </yarpConfigurationString>
         </plugin>
       </sensor>
-      <!-- <sensor name='lasersensor_head' type='ray'>
+      <sensor name='lasersensor_head' type='ray'>
         <always_on>true</always_on>
         <update_rate>100</update_rate>
         <pose>5.0000000000000002e-05 -1.9385499999999999e-15 0.13480200000000001
@@ -3212,10 +3212,12 @@
             <stddev>0.0050000000000000001</stddev>
           </noise>
         </ray>
-        <plugin name='ergocub_yarp_gazebo_plugin_laser' filename='libgazebo_yarp_lasersensor.so'>
-      <yarpConfigurationFile>model://ergoCub/conf/sensors/gazebo_ergocub_lidar.ini</yarpConfigurationFile>
+        <plugin name="gzyarp::Laser" filename="gz-sim-yarp-laser-system">
+          <yarpConfigurationFile>
+            /home/acroci/ergocub_ws/install/share/ergoCub/conf/sensors/gazebo_ergocub_lidar.ini
+          </yarpConfigurationFile>
         </plugin>
-      </sensor> -->
+      </sensor>
     </link>
     <joint name='camera_tilt' type='revolute'>
       <pose relative_to='head'>0.062509999999999927 -3.000000000110585e-05 0.07639250000000064
