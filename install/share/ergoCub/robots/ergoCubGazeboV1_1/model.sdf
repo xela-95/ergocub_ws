@@ -550,7 +550,7 @@
           </limit>
         </ode>
       </physics>
-      <!-- <sensor name='l_foot_front_ft' type='force_torque'>
+      <sensor name='l_foot_front_ft' type='force_torque'>
         <always_on>true</always_on>
         <update_rate>100</update_rate>
         <force_torque>
@@ -558,10 +558,17 @@
           <measure_direction>parent_to_child</measure_direction>
         </force_torque>
         <pose>0 0 0 1.2566700000000003e-16 2.2011199999999993e-17 -2.0943999999999998</pose>
-        <plugin name='left_foot_front_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
-      <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_foot_front_ft.ini</yarpConfigurationFile>
+        <plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+          <!--
+          <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_foot_front_ft.ini</yarpConfigurationFile> -->
+          <yarpConfigurationString>
+            (yarpDeviceName ergocub_left_foot_front_ft)
+            (disableImplicitNetworkWrapper)
+            (jointName l_foot_front_ft_sensor)
+            (sensorName l_foot_front_ft)
+          </yarpConfigurationString>
         </plugin>
-      </sensor> -->
+      </sensor>
     </joint>
     <link name='l_foot_front'>
       <pose relative_to='l_foot_front_ft_sensor'>0 0 0 0 0 0</pose>
@@ -654,7 +661,7 @@
           </limit>
         </ode>
       </physics>
-      <!-- <sensor name='l_foot_rear_ft' type='force_torque'>
+      <sensor name='l_foot_rear_ft' type='force_torque'>
         <always_on>true</always_on>
         <update_rate>100</update_rate>
         <force_torque>
@@ -662,10 +669,17 @@
           <measure_direction>parent_to_child</measure_direction>
         </force_torque>
         <pose>0 0 0 1.2566700000000003e-16 2.2011199999999993e-17 -2.0943999999999998</pose>
-        <plugin name='left_foot_rear_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
-      <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_foot_rear_ft.ini</yarpConfigurationFile>
+        <plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+          <!--
+          <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_foot_rear_ft.ini</yarpConfigurationFile> -->
+          <yarpConfigurationString>
+            (yarpDeviceName ergocub_left_foot_rear_ft)
+            (disableImplicitNetworkWrapper)
+            (jointName l_foot_rear_ft_sensor)
+            (sensorName l_foot_rear_ft)
+          </yarpConfigurationString>
         </plugin>
-      </sensor> -->
+      </sensor>
     </joint>
     <link name='l_foot_rear'>
       <pose relative_to='l_foot_rear_ft_sensor'>0 0 0 0 0 0</pose>
@@ -894,7 +908,7 @@
           </limit>
         </ode>
       </physics>
-      <!-- <sensor name='r_leg_ft' type='force_torque'>
+      <sensor name='r_leg_ft' type='force_torque'>
         <always_on>true</always_on>
         <update_rate>100</update_rate>
         <force_torque>
@@ -903,10 +917,17 @@
         </force_torque>
         <pose>1.21431e-17 2.7755599999999997e-17 5.5511199999999995e-17 3.1415899999999999
           2.9888097527371862e-16 -2.6179899999999998</pose>
-        <plugin name='right_leg_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
-      <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_leg_ft.ini</yarpConfigurationFile>
+        <plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+          <!--
+          <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_leg_ft.ini</yarpConfigurationFile> -->
+          <yarpConfigurationString>
+            (yarpDeviceName ergocub_right_leg_ft)
+            (disableImplicitNetworkWrapper)
+            (jointName r_leg_ft_sensor)
+            (sensorName r_leg_ft)
+          </yarpConfigurationString>
         </plugin>
-      </sensor> -->
+      </sensor>
     </joint>
     <link name='r_hip_3'>
       <pose relative_to='r_leg_ft_sensor'>0 0 0 0 0 0</pose>
@@ -1241,7 +1262,7 @@
           </limit>
         </ode>
       </physics>
-      <!-- <sensor name='r_foot_front_ft' type='force_torque'>
+      <sensor name='r_foot_front_ft' type='force_torque'>
         <always_on>true</always_on>
         <update_rate>100</update_rate>
         <force_torque>
@@ -1250,10 +1271,17 @@
         </force_torque>
         <pose>0 1.3877799999999999e-17 1.11022e-16 -1.0903000000000002e-16 -1.4422200000000001e-16
           -2.0943999999999998</pose>
-        <plugin name='right_foot_front_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
-      <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_foot_front_ft.ini</yarpConfigurationFile>
+        <plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+          <!--
+          <yarpConfurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_foot_front_ft.ini</yarpConfigurationFile> -->
+          <yarpConfigurationString>
+            (yarpDeviceName ergocub_right_foot_front_ft)
+            (disableImplicitNetworkWrapper)
+            (jointName r_foot_front_ft_sensor)
+            (sensorName r_foot_front_ft)
+          </yarpConfigurationString>
         </plugin>
-      </sensor> -->
+      </sensor>
     </joint>
     <link name='r_foot_front'>
       <pose relative_to='r_foot_front_ft_sensor'>0 0 0 0 0 0</pose>
@@ -1347,7 +1375,7 @@
           </limit>
         </ode>
       </physics>
-      <!-- <sensor name='r_foot_rear_ft' type='force_torque'>
+      <sensor name='r_foot_rear_ft' type='force_torque'>
         <always_on>true</always_on>
         <update_rate>100</update_rate>
         <force_torque>
@@ -1356,10 +1384,17 @@
         </force_torque>
         <pose>3.4694499999999997e-18 0 0 -1.0903000000000002e-16 -1.4422200000000001e-16
           -2.0943999999999998</pose>
-        <plugin name='right_foot_rear_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
-      <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_foot_rear_ft.ini</yarpConfigurationFile>
+        <plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+          <!--
+          <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_foot_rear_ft.ini</yarpConfigurationFile> -->
+          <yarpConfigurationString>
+            (yarpDeviceName ergocub_right_foot_rear_ft)
+            (disableImplicitNetworkWrapper)
+            (jointName r_foot_rear_ft_sensor)
+            (sensorName r_foot_rear_ft)
+          </yarpConfigurationString>
         </plugin>
-      </sensor> -->
+      </sensor>
     </joint>
     <link name='r_foot_rear'>
       <pose relative_to='r_foot_rear_ft_sensor'>0 0 0 0 0 0</pose>
@@ -1810,7 +1845,7 @@
           </limit>
         </ode>
       </physics>
-      <!-- <sensor name='l_arm_ft' type='force_torque'>
+      <sensor name='l_arm_ft' type='force_torque'>
         <always_on>true</always_on>
         <update_rate>100</update_rate>
         <force_torque>
@@ -1818,10 +1853,17 @@
           <measure_direction>child_to_parent</measure_direction>
         </force_torque>
         <pose>-3.4694499999999997e-18 0 0 3.1415899999999999 1.9428881755116558e-16 -1.5708</pose>
-        <plugin name='left_arm_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
-      <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_arm_ft.ini</yarpConfigurationFile>
+        <plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+          <!--
+          <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_arm_ft.ini</yarpConfigurationFile> -->
+          <yarpConfigurationString>
+            (yarpDeviceName ergocub_left_arm_ft)
+            (disableImplicitNetworkWrapper)
+            (jointName l_arm_ft_sensor)
+            (sensorName l_arm_ft)
+          </yarpConfigurationString>
         </plugin>
-      </sensor> -->
+      </sensor>
     </joint>
     <link name='l_shoulder_3'>
       <pose relative_to='l_arm_ft_sensor'>0 0 0 0 0 0</pose>
@@ -3449,7 +3491,7 @@
           </limit>
         </ode>
       </physics>
-      <!-- <sensor name='r_arm_ft' type='force_torque'>
+      <sensor name='r_arm_ft' type='force_torque'>
         <always_on>true</always_on>
         <update_rate>100</update_rate>
         <force_torque>
@@ -3457,10 +3499,17 @@
           <measure_direction>child_to_parent</measure_direction>
         </force_torque>
         <pose>0 0 0 -3.1415899999999999 -2.7755575615628914e-17 1.5708</pose>
-        <plugin name='right_arm_ft_plugin' filename='libgazebo_yarp_forcetorque.so'>
-      <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_arm_ft.ini</yarpConfigurationFile>
+        <plugin name="gzyarp::ForceTorque" filename="gz-sim-yarp-forcetorque-system">
+          <!--
+          <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_arm_ft.ini</yarpConfigurationFile> -->
+          <yarpConfigurationString>
+            (yarpDeviceName ergocub_right_arm_ft)
+            (disableImplicitNetworkWrapper)
+            (jointName r_arm_ft_sensor)
+            (sensorName r_arm_ft)
+          </yarpConfigurationString>
         </plugin>
-      </sensor> -->
+      </sensor>
     </joint>
     <link name='r_shoulder_3'>
       <pose relative_to='r_arm_ft_sensor'>0 0 0 0 0 0</pose>
