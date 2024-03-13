@@ -745,13 +745,9 @@
         <update_rate>100</update_rate>
         <pose>0 0 0 1.2566700000000003e-16 2.2011199999999993e-17 -2.0943999999999998</pose>
         <plugin name="gzyarp::Imu" filename="gz-sim-yarp-imu-system">
-          <!-- <yarpConfigurationFile>
-            model://ergoCub/conf/gazebo_ergocub_l_foot_rear_ft_sensor_inertial.ini</yarpConfigurationFile> -->
-          <yarpConfigurationString>
-            (yarpDeviceName l_foot_rear_ft_sensor_inertial_hardware_device)
-            (parentLinkName l_foot_rear)
-            (sensorName l_foot_rear_ft_imu)
-          </yarpConfigurationString>
+          <yarpConfigurationFile>
+            model://ergoCub/conf/gazebo_ergocub_l_foot_rear_ft_sensor_inertial.ini
+          </yarpConfigurationFile>
         </plugin>
       </sensor>
     </link>
