@@ -9,18 +9,18 @@
   <param name="ThreeAxisLinearAccelerometersNames">
     (l_foot_front_ft_imu, l_foot_rear_ft_imu)
   </param>
-  <param name="ThreeAxisMagnetometersNames">
+  <!-- <param name="ThreeAxisMagnetometersNames">
     (l_foot_front_ft_imu, l_foot_rear_ft_imu)
-  </param>
+  </param> -->
   <param name="OrientationSensorsNames">
     (l_foot_front_ft_imu, l_foot_rear_ft_imu)
   </param>
 
-    <action phase="startup" level="5" type="attach">
-         <paramlist name="networks">
-             <elem name="FirstIMU"> l_foot_front_ft_sensor_inertial_hardware_device </elem>
-             <elem name="SecondIMU"> l_foot_rear_ft_sensor_inertial_hardware_device </elem>
-         </paramlist>
-     </action>
-    <action phase="shutdown" level="20" type="detach" />
+  <action phase="startup" level="5" type="attach">
+    <paramlist name="networks">
+      <elem name="FirstIMU"> l_foot_front_ft_sensor_inertial_hardware_device </elem>
+      <elem name="SecondIMU"> l_foot_rear_ft_sensor_inertial_hardware_device </elem>
+    </paramlist>
+  </action>
+  <action phase="shutdown" level="20" type="detach" />
 </device>
