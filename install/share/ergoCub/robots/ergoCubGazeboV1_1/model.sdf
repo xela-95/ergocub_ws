@@ -4475,6 +4475,12 @@
     <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_waist_inertial.ini</yarpConfigurationFile>
     </plugin> -->
 
+    <!-- CLOCK -->
+    <plugin
+      filename="gz-sim-yarp-clock-system"
+      name="gzyarp::Clock">
+    </plugin>
+
     <!-- IMUs -->
 
     <plugin name="gzyarp::Imu" filename="gz-sim-yarp-imu-system">
