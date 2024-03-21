@@ -6,7 +6,7 @@
         <physics name="1ms" type="ignored">
             <max_step_size>0.001</max_step_size>
             <real_time_factor>1.0</real_time_factor>
-            <!-- <max_contacts>4</max_contacts> -->
+            <max_contacts>4</max_contacts>
             <!-- <dart>
                 <collision_detector>ode</collision_detector>
             </dart> -->
@@ -22,14 +22,6 @@
         <plugin
             filename="gz-sim-sensors-system"
             name="gz::sim::systems::Sensors">
-        </plugin>
-        <plugin
-            filename="gz-sim-forcetorque-system"
-            name="gz::sim::systems::ForceTorque">
-        </plugin>
-        <plugin
-            filename="gz-sim-imu-system"
-            name="gz::sim::systems::Imu">
         </plugin>
         <plugin
             filename="gz-sim-scene-broadcaster-system"
